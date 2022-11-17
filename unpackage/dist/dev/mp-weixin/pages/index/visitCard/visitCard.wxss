@@ -1,0 +1,6 @@
+
+.idcard{
+	margin: 50rpx;
+	background-color: #eee23e
+}
+

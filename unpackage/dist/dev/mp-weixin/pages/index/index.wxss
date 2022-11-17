@@ -1,0 +1,15 @@
+
+.uni-grid-item-icon{
+	display: flex;
+	height: 60%;
+	width: 100%;
+	justify-content: center;
+}
+.item text{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 24rpx;
+	margin: 5rpx;
+}
+

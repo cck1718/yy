@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/visitCard/visitCard",
+    "pages/index/register/register",
+    "pages/index/pay/pay",
+    "pages/index/nucleicAcid/nucleicAcid",
+    "pages/index/inpatientList/inpatientList",
+    "pages/index/report/report",
+    "pages/index/recharge/recharge",
+    "pages/info/info",
+    "pages/info/departmentInfo/departmentInfo",
+    "pages/user/user",
+    "pages/user/myVisitCard/myVisitCard",
+    "pages/user/registerRecord/registerRecord",
+    "pages/user/payRecord/payRecord",
+    "pages/user/inpatientRechargeRecord/inpatientRechargeRecord",
+    "pages/user/outpatientMedicalRecord/outpatientMedicalRecord",
+    "pages/user/physicalExamPayRecord/physicalExamPayRecord",
+    "pages/user/checkAppointment/checkAppointment",
+    "pages/user/myCollection/myCollection"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "安化县人民医院",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/shouye.png",
+        "selectedIconPath": "static/shouye02.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "医院信息",
+        "iconPath": "static/yiyuan.png",
+        "selectedIconPath": "static/yiyuan02.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "static/geren.png",
+        "selectedIconPath": "static/geren02.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,1 @@
+<view><uni-notice-bar vue-id="4748b7b6-1" text="本院实行实名制就诊，请如实填写就诊人信息，如因信息错误产生的一切后果" bind:__l="__l"></uni-notice-bar></view>

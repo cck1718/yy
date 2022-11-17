@@ -1,0 +1,148 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "安化县人民医院"
+		}
+	},
+	{
+		"path": "pages/index/visitCard/visitCard",
+		"style": {
+			"navigationBarTitleText": "申领电子健康卡"
+		}
+	},
+	{
+		"path": "pages/index/register/register",
+		"style": {
+			"navigationBarTitleText": "科室列表"
+		}
+	},
+	{
+		"path": "pages/index/pay/pay",
+		"style": {
+			"navigationBarTitleText": "代缴费列表"
+		}
+	},
+	{
+		"path": "pages/index/nucleicAcid/nucleicAcid",
+		"style": {
+			"navigationBarTitleText": "申请核酸"
+		}
+	},
+	{
+		"path": "pages/index/inpatientList/inpatientList",
+		"style": {
+			"navigationBarTitleText": "我的住院人"
+		}
+	},
+	{
+		"path": "pages/index/report/report",
+		"style": {
+			"navigationBarTitleText": "我的就诊人"
+		}
+	},
+	{
+		"path": "pages/index/recharge/recharge",
+		"style": {
+			"navigationBarTitleText": "住院充值"
+		}
+	},
+	{
+		"path": "pages/info/info",
+		"style": {
+			"navigationBarTitleText": "医院信息"
+		}
+	},
+	{
+		"path": "pages/info/departmentInfo/departmentInfo",
+		"style": {
+			"navigationBarTitleText": "科室列表"
+		}
+	},
+	{
+		"path": "pages/user/user",
+		"style": {
+			"navigationBarTitleText": "个人信息"
+		}
+	},
+	{
+		"path": "pages/user/myVisitCard/myVisitCard",
+		"style": {
+			"navigationBarTitleText": "我的就诊卡"
+		}
+	},
+	{
+		"path": "pages/user/registerRecord/registerRecord",
+		"style": {
+			"navigationBarTitleText": "挂号记录"
+		}
+	},
+	{
+		"path": "pages/user/payRecord/payRecord",
+		"style": {
+			"navigationBarTitleText": "门诊缴费记录"
+		}
+	},
+	{
+		"path": "pages/user/inpatientRechargeRecord/inpatientRechargeRecord",
+		"style": {
+			"navigationBarTitleText": "住院充值记录"
+		}
+	},
+	{
+		"path": "pages/user/outpatientMedicalRecord/outpatientMedicalRecord",
+		"style": {
+			"navigationBarTitleText": "门诊病历记录"
+		}
+	},
+	{
+		"path": "pages/user/physicalExamPayRecord/physicalExamPayRecord",
+		"style": {
+			"navigationBarTitleText": "体检缴费记录"
+		}
+	},
+	{
+		"path": "pages/user/checkAppointment/checkAppointment",
+		"style": {
+			"navigationBarTitleText": "检查预约"
+		}
+	},
+	{
+		"path": "pages/user/myCollection/myCollection",
+		"style": {
+			"navigationBarTitleText": "我的收藏"
+		}
+	}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "安化县人民医院",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	},
+	"tabBar": {
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/shouye.png",
+				"selectedIconPath": "static/shouye02.png"
+			},
+			{
+				"pagePath": "pages/info/info",
+				"text": "医院信息",
+				"iconPath": "static/yiyuan.png",
+				"selectedIconPath": "static/yiyuan02.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "个人中心",
+				"iconPath": "static/geren.png",
+				"selectedIconPath": "static/geren02.png"
+			}
+		]
+	}
+}
