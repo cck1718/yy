@@ -1,0 +1,10 @@
+
+.doct text{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 40rpx;
+	font-weight: 500;
+	margin: 5rpx;
+}
+

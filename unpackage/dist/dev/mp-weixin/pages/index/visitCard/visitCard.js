@@ -98,7 +98,10 @@ var components
 try {
   components = {
     uniNoticeBar: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar */ "uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue */ 161))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar */ "uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-notice-bar/components/uni-notice-bar/uni-notice-bar.vue */ 191))
+    },
+    uniIcons: function() {
+      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 183))
     }
   }
 } catch (e) {
@@ -155,7 +158,12 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
 //
 //
 //
@@ -165,11 +173,23 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      image: '' };
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    open: function open() {
+      uni.showToast({
+        title: '请先上传照片',
+        icon: 'none' });
+
+    },
+    to: function to() {
+      uni.navigateTo({
+        url: '/pages/index/visitCard/info/info' });
+
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

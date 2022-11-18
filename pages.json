@@ -12,6 +12,12 @@
 		}
 	},
 	{
+		"path": "pages/index/visitCard/info/info",
+		"style": {
+			"navigationBarTitleText": "申领电子健康卡"
+		}
+	},
+	{
 		"path": "pages/index/register/register",
 		"style": {
 			"navigationBarTitleText": "科室列表"
@@ -57,6 +63,24 @@
 		"path": "pages/info/departmentInfo/departmentInfo",
 		"style": {
 			"navigationBarTitleText": "科室列表"
+		}
+	},
+	{
+		"path": "pages/info/departmentInfo/dept/dept",
+		"style": {
+			"navigationBarTitleText": "科室信息"
+		}
+	},
+	{
+		"path": "pages/info/departmentInfo/doct/doct",
+		"style": {
+			"navigationBarTitleText": "医生信息"
+		}
+	},
+	{
+		"path": "pages/info/departmentInfo/doct/doctInfo/doctInfo",
+		"style": {
+			"navigationBarTitleText": "医生主页"
 		}
 	},
 	{

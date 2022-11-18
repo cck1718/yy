@@ -1,0 +1,29 @@
+
+.dept text{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	font-size: 40rpx;
+	font-weight: 500;
+	margin: 5rpx;
+}
+.line{
+	margin-top: 20rpx;
+	margin-bottom: 25rpx;
+	width:100%;
+	height:1rpx;
+	background:#aaa;
+}
+.title{
+	margin-top: 20rpx;
+	font-size: 24rpx;
+	color: #808080;
+}
+.t{
+	margin-top: 20rpx;
+	font-size: 24rpx;
+}
+.oneplice{
+	margin: 40rpx;
+}
+

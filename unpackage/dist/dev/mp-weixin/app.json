@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/index/visitCard/visitCard",
+    "pages/index/visitCard/info/info",
     "pages/index/register/register",
     "pages/index/pay/pay",
     "pages/index/nucleicAcid/nucleicAcid",
@@ -10,6 +11,9 @@
     "pages/index/recharge/recharge",
     "pages/info/info",
     "pages/info/departmentInfo/departmentInfo",
+    "pages/info/departmentInfo/dept/dept",
+    "pages/info/departmentInfo/doct/doct",
+    "pages/info/departmentInfo/doct/doctInfo/doctInfo",
     "pages/user/user",
     "pages/user/myVisitCard/myVisitCard",
     "pages/user/registerRecord/registerRecord",
@@ -49,6 +53,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

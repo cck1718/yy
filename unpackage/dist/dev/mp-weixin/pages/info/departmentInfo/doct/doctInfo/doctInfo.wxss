@@ -1,0 +1,6 @@
+
+.info text{
+	 font-size: 35rpx;
+	 font-weight: 500;
+}
+
