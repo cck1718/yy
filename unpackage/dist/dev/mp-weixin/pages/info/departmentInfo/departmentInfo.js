@@ -169,20 +169,20 @@ var _default =
   data: function data() {
     return {
       mark: '',
-      deptInfo: ["发热科", "门诊科"] };
+      deptInfo: [{ id: 1, name: '发热科' }, { id: 2, name: '口腔科' }] };
 
   },
   methods: {
-    goTo: function goTo(index) {
+    goTo: function goTo(id) {
       if (this.mark == 1) {
-        //跳转到科室信息页面 传入科室下标
+        //跳转到科室信息页面 传入科室id
         uni.navigateTo({
-          url: '/pages/info/departmentInfo/dept/dept?index=' + index });
+          url: '/pages/info/departmentInfo/dept/dept?index=' + id });
 
       } else {
-        //跳转到医生信息页面 传入科室下标
+        //跳转到医生信息页面 传入科室id
         uni.navigateTo({
-          url: '/pages/info/departmentInfo/doct/doct?index=' + index });
+          url: '/pages/info/departmentInfo/doct/doct?index=' + id });
 
       }
     } },

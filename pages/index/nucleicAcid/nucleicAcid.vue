@@ -17,7 +17,7 @@
 				<button class="btn" @click="single()" >申请单人单检</button>
 				<button class="btn" @click="multiple()" >申请多人混检</button>
 			</view>
-			<view v-if="orderList!=null">
+			<!-- <view v-if="orderList!=null">
 				<text>点击下面核酸检测记录可自动写入基本信息</text>
 				<view class="line"></view>
 				<uni-table>
@@ -35,7 +35,7 @@
 						<uni-td>{{order.result}}</uni-td>
 					</uni-tr>
 				</uni-table>
-			</view>
+			</view> -->
 		</uni-section>
 		
 		
@@ -49,7 +49,7 @@
 				name:'',
 				idCard:'',
 				phone:'',
-				orderList:[]//订单信息
+				//orderList:[]//订单信息
 			}
 		},
 		methods: {
@@ -96,6 +96,11 @@
 				//获取订单信息
 				}
 			}
+		},
+		onLoad() {
+			uni.navigateTo({
+				url:'/pages/notify/notify'
+			})
 		}
 	}
 </script>

@@ -1,7 +1,7 @@
 <template>
 	<view>
-		<uni-list v-for="(name, index) in deptInfo" :key="index">
-			<uni-list-item  :title=name link clickable="true" @click="goTo(index)"></uni-list-item>
+		<uni-list v-for="(dept, index) in deptInfo" :key="index">
+			<uni-list-item  :title=dept.name link clickable="true" @click="goTo(dept.id)"></uni-list-item>
 		</uni-list>
 	</view>
 </template>
@@ -11,20 +11,20 @@
 		data() {
 			return {
 				mark:'',
-				deptInfo:["发热科","门诊科"]
+				deptInfo:[{id:1,name:'发热科'},{id:2,name:'口腔科'}]
 			}
 		},
 		methods: {
-			goTo(index){
+			goTo(id){
 				if(this.mark == 1){
-					//跳转到科室信息页面 传入科室下标
+					//跳转到科室信息页面 传入科室id
 					uni.navigateTo({
-						url: '/pages/info/departmentInfo/dept/dept?index='+index
+						url: '/pages/info/departmentInfo/dept/dept?index='+id
 					})
 				}else{
-					//跳转到医生信息页面 传入科室下标
+					//跳转到医生信息页面 传入科室id
 					uni.navigateTo({
-						url: '/pages/info/departmentInfo/doct/doct?index='+index
+						url: '/pages/info/departmentInfo/doct/doct?index='+id
 					})
 				}
 			}

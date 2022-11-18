@@ -23,7 +23,8 @@
     "pages/user/outpatientMedicalRecord/outpatientMedicalRecord",
     "pages/user/physicalExamPayRecord/physicalExamPayRecord",
     "pages/user/checkAppointment/checkAppointment",
-    "pages/user/myCollection/myCollection"
+    "pages/user/myCollection/myCollection",
+    "pages/notify/notify"
   ],
   "subPackages": [],
   "window": {

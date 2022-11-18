@@ -182,7 +182,7 @@ var _default =
 {
   data: function data() {
     return {
-      index: "",
+      id: "",
       deptInfo: { name: "发热科", add: "暂无", phone: "暂无", info: "科室介绍" } };
 
   },
@@ -190,7 +190,7 @@ var _default =
 
 
   onLoad: function onLoad(e) {
-    this.index = e.index;
+    this.id = e.id;
     //调用接口 传入index获取科室信息 deptInfo接收
   } };exports.default = _default;
 

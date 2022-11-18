@@ -22,7 +22,7 @@
 	export default {
 		data() {
 			return {
-				index:"",
+				id:"",
 				deptInfo:{name:"发热科",add:"暂无",phone:"暂无",info:"科室介绍"}
 			}
 		},
@@ -30,7 +30,7 @@
 			
 		},
 		onLoad(e) {
-			this.index=e.index;
+			this.id=e.id;
 			//调用接口 传入index获取科室信息 deptInfo接收
 		}
 	}

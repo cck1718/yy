@@ -1,0 +1,1 @@
+<view>安化县人民医院新冠肺炎疫情防控告知书<button data-event-opts="{{[['tap',[['back',['$event']]]]]}}" class="btn" bindtap="__e">我已了解</button></view>
