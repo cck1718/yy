@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-search-bar @confirm="search" @input="input" placeholder="搜索科室或医生"></uni-search-bar>
+		<uni-search-bar  placeholder="搜索科室或医生" v-model="seach"></uni-search-bar>
 		<uni-list v-for="(dept, index) in deptList" :key="index">
 			<uni-list-item  :title=dept.name link clickable="true" @click="to(dept.id)"></uni-list-item>
 		</uni-list>
@@ -11,6 +11,7 @@
 	export default {
 		data() {
 			return {
+				search:'',
 				deptList:[{id:1,name:'发热科'},{id:2,name:'口腔科'}]
 			}
 		},

@@ -1,1 +1,5 @@
-/* pages/index/register/registerInfo/registerInfo.wxss */
+
+.t{
+	margin-top: 15rpx;
+}
+

@@ -170,6 +170,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -178,15 +181,27 @@ var _default =
 
   },
   methods: {
+    //按钮
     open: function open() {
       uni.showToast({
         title: '请先上传照片',
         icon: 'none' });
 
     },
+    //页面跳转
     to: function to() {
       uni.navigateTo({
         url: '/pages/index/visitCard/info/info' });
+
+    },
+    //上传图片
+    img: function img() {
+      uni.chooseImage({
+        count: 1,
+        success: function success(res) {
+          console.log(JSON.stringify(res.tempFilePaths));
+          this.image = JSON.stringify(res.tempFilePaths);
+        } });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

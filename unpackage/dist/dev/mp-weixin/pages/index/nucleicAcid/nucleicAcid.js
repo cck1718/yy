@@ -134,6 +134,18 @@ try {
     },
     uniEasyinput: function() {
       return __webpack_require__.e(/*! import() | uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput */ "uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput.vue */ 217))
+    },
+    uniTable: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-table/uni-table */ "uni_modules/uni-table/components/uni-table/uni-table").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-table/uni-table.vue */ 207))
+    },
+    uniTr: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-tr/uni-tr */ "uni_modules/uni-table/components/uni-tr/uni-tr").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-tr/uni-tr.vue */ 353))
+    },
+    uniTh: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-th/uni-th */ "uni_modules/uni-table/components/uni-th/uni-th").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-th/uni-th.vue */ 360))
+    },
+    uniTd: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-table/components/uni-td/uni-td */ "uni_modules/uni-table/components/uni-td/uni-td").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-table/components/uni-td/uni-td.vue */ 377))
     }
   }
 } catch (e) {
@@ -190,7 +202,25 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -219,11 +249,58 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 var _default =
 {
   data: function data() {
-    return {};
-
-
+    return {
+      name: '',
+      idCard: '',
+      phone: '',
+      orderList: [] //订单信息
+    };
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    //数据检查
+    check: function check() {
+      if (this.name == null || this.name == '' || this.idCard == null || this.idCard == '' || this.phone == null || this.phone == '') {
+        uni.showToast({
+          title: '请完善个人信息',
+          icon: 'none' });
+
+        return false;
+      }
+      if (this.idCard.length != 18) {
+        uni.showToast({
+          title: '请输入18位合法身份证',
+          icon: 'none' });
+
+        return false;
+      }
+      if (this.phone.length != 11) {
+        uni.showToast({
+          title: '请输入正确的手机号',
+          icon: 'none' });
+
+        return false;
+      }
+      //调用接口验证身份证和姓名是否正确
+      //判断当日是否挂号，每个用户每日只可挂号一次
+      return true;
+    },
+    //单人检测
+    single: function single() {
+      if (this.check()) {
+        //发起请求创建订单
+        console.log("单人检测");
+        //获取订单信息
+      }
+    },
+    //多人混检
+    multiple: function multiple() {
+      if (this.check()) {
+        //发起请求创建订单
+        console.log("多人混检");
+        //获取订单信息
+      }
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

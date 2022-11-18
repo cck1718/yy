@@ -172,6 +172,7 @@ var _default =
 {
   data: function data() {
     return {
+      search: '',
       deptList: [{ id: 1, name: '发热科' }, { id: 2, name: '口腔科' }] };
 
   },

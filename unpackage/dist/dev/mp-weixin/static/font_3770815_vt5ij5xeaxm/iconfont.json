@@ -6,13 +6,6 @@
   "description": "",
   "glyphs": [
     {
-      "icon_id": "2187799",
-      "name": "照相",
-      "font_class": "zhaoxiang",
-      "unicode": "e618",
-      "unicode_decimal": 58904
-    },
-    {
       "icon_id": "32901101",
       "name": "照相-copy",
       "font_class": "zhaoxiang-copy",
@@ -25,13 +18,6 @@
       "font_class": "yisheng",
       "unicode": "e6ef",
       "unicode_decimal": 59119
-    },
-    {
-      "icon_id": "10268558",
-      "name": "科室介绍",
-      "font_class": "keshijieshao",
-      "unicode": "e67d",
-      "unicode_decimal": 59005
     },
     {
       "icon_id": "11372759",
