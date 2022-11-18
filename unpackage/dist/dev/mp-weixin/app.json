@@ -4,6 +4,7 @@
     "pages/index/visitCard/visitCard",
     "pages/index/visitCard/info/info",
     "pages/index/register/register",
+    "pages/index/register/registerInfo/registerInfo",
     "pages/index/pay/pay",
     "pages/index/nucleicAcid/nucleicAcid",
     "pages/index/inpatientList/inpatientList",

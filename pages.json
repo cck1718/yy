@@ -24,6 +24,9 @@
 		}
 	},
 	{
+		"path": "pages/index/register/registerInfo/registerInfo"
+	},
+	{
 		"path": "pages/index/pay/pay",
 		"style": {
 			"navigationBarTitleText": "代缴费列表"
