@@ -1,6 +1,14 @@
 <template>
 	<view>
-		住院清单
+		<view v-show="inpatientList">
+			<uni-list v-for="(inpatient, index) in inpatientList" :key="index">
+				<uni-list-item :title=inpatient.name note="电子健康卡" clickable="true" @click="">
+				</uni-list-item>
+			</uni-list>
+		</view>
+		<view @click="toAdd" style="width: 700rpx; height: 300rpx; border: 1rpx; display: flex; justify-content: center; align-items: center; margin: 30rpx; border-style: dashed; border-color: #808080;">
+			<text style="font-size: 30rpx;">添加住院人\n还可添加{{num}}人</text>
+		</view>
 	</view>
 </template>
 
@@ -8,11 +16,23 @@
 	export default {
 		data() {
 			return {
-				
+				inpatientList:[{id:1,name:'张三'},{id:2,name:'李四'}],
+				num:''
 			}
 		},
 		methods: {
-			
+			/**
+			 * 跳转到添加住院人页面
+			 */
+			toAdd(){
+				uni.navigateTo({
+					url:'/pages/index/inpatientList/addInpatient/addInpatient'
+				})
+			}
+		},
+		onLoad() {
+			//获取我的住院人信息
+			this.num=10 - this.inpatientList.length;
 		}
 	}
 </script>

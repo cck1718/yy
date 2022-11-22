@@ -190,6 +190,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/index/inpatientList/addInpatient/addInpatient",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "添加住院人"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
