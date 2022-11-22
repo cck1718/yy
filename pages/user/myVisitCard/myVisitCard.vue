@@ -1,6 +1,8 @@
 <template>
 	<view>
-		我的就诊卡
+		
+		此处调用电子健康卡
+		
 	</view>
 </template>
 
@@ -8,11 +10,14 @@
 	export default {
 		data() {
 			return {
-				
+				visitCardList:[]
 			}
 		},
 		methods: {
 			
+		},
+		onLoad() {
+			//获取就诊卡信息
 		}
 	}
 </script>

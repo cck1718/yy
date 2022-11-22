@@ -1,6 +1,16 @@
 <template>
 	<view>
-		<uni-card title="添加就诊卡"  note="Tips" mode="style" @tap="to('/visitCard/visitCard')">
+		<uni-card title="添加就诊卡" @tap="to('/visitCard/visitCard')" v-show="!visitCard"></uni-card>
+		<uni-card :title=visitCard.userName :sub-title=visitCard.idCard border="false" @tap="toByElement('/pages/index/visitCard/detail/detail',visitCard.id)" v-show="visitCard">
+			
+			<uni-row class="demo-uni-row">
+				<uni-col :span="6" :push="5">
+					<text class="text"  @click="toOtherBar('/pages/user/myVisitCard/myVisitCard')">点我绑卡</text>
+				</uni-col>
+				<uni-col :span="6" :push="7">
+					<text class="text" @click="toByElement('/pages/index/visitCard/changePatient/changePatient',user.id)">切换就诊人</text>
+				</uni-col>
+			</uni-row>
 		</uni-card>
 		
 		<uni-grid :column="3" :showBorder="false"  :square="false" isShadow="true">
@@ -128,7 +138,8 @@
 	export default {
 		data() {
 			return {
-				
+				visitCard:{id:1,userName:'张三',idCard:430923222231234231,idDefault:1},
+				user:{id:1}
 			}
 		},
 		methods: {
@@ -137,7 +148,24 @@
 				uni.navigateTo({
 					url: '/pages/index' + url1
 				})
-			}
+			},
+			//携带参数跳转页面
+			toByElement(url1,e){
+				uni.navigateTo({
+					url: url1 + '?id='+e
+				})
+			},
+			toOtherBar(url1){
+				uni.navigateTo({
+					url: url1
+				})
+			},
+		},
+		onLoad() {
+			//通过用户id获取默认就诊卡信息
+			//visitCard
+			
+			//获取登录信息
 		}
 	}
 </script>

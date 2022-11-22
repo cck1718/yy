@@ -24,7 +24,13 @@
     "pages/user/physicalExamPayRecord/physicalExamPayRecord",
     "pages/user/checkAppointment/checkAppointment",
     "pages/user/myCollection/myCollection",
-    "pages/notify/notify"
+    "pages/notify/notify",
+    "pages/index/nucleicAcid/survey/survey",
+    "pages/index/register/registerInfo/byDoctor/byDoctor",
+    "pages/index/report/checkoutReport/checkoutReport",
+    "pages/index/visitCard/detail/detail",
+    "pages/index/visitCard/changePatient/changePatient",
+    "pages/index/pay/payDetail/payDetail"
   ],
   "subPackages": [],
   "window": {

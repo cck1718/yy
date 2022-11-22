@@ -145,8 +145,52 @@
 		"style": {
 			"navigationBarTitleText": "病友告知"
 		}
-	}
-	],
+	},
+	{
+        "path" : "pages/index/nucleicAcid/survey/survey",
+        "style" : {
+            "navigationBarTitleText": "问卷调查"
+        }        
+    },
+	{
+        "path" : "pages/index/register/registerInfo/byDoctor/byDoctor",
+        "style" : {
+            "navigationBarTitleText": "医生主页"
+        }
+    }
+        ,{
+            "path" : "pages/index/report/checkoutReport/checkoutReport",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "检验检查报告"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/visitCard/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "就诊人详情"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/visitCard/changePatient/changePatient",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "切换就诊人"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/pay/payDetail/payDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "待缴费详情"
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "安化县人民医院",

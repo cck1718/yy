@@ -1,0 +1,12 @@
+
+.t text{
+	display: flex;
+	justify-content: center;
+}
+.redT{
+	color: red;
+}
+.box{
+	margin: 30rpx;
+}
+

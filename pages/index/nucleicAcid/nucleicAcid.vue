@@ -86,6 +86,7 @@
 				//发起请求创建订单
 				console.log("单人检测")
 				//获取订单信息
+				this.to();
 				}
 			},
 			//多人混检
@@ -95,6 +96,12 @@
 				console.log("多人混检")
 				//获取订单信息
 				}
+			},
+			//页面跳转
+			to(){
+				uni.navigateTo({
+					url:'survey/survey'
+				})
 			}
 		},
 		onLoad() {
@@ -114,11 +121,6 @@
 	align-items: center;
 	justify-content: center;
 	color: red;
-}
-.btn{
-	margin: 30rpx;
-	background-color: #2edfa3;
-	color: white;
 }
 .line{
 	margin-top: 20rpx;

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "report-uni-list-item-default": "/pages/index/report/report-uni-list-item-default",
+    "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list",
+    "uni-list-item": "/uni_modules/uni-list/components/uni-list-item/uni-list-item"
+  }
+}
