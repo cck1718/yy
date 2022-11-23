@@ -198,6 +198,38 @@
             }
             
         }
+        ,{
+            "path" : "pages/healthCard/healthCard",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "健康卡"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/inpatientList/inpatientBill/inpatientBill",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "住院日清单"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/inpatientList/inpatientInfo/inpatientInfo",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "住院人详情"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/inpatientList/inpatientPrepare/inpatientPrepare",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "住院预约"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

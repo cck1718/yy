@@ -14,16 +14,16 @@
 					<uni-th align="center" width="100rpx">金额(元)</uni-th>
 				</uni-tr>
 				<uni-tr v-for="(poject, index) in detail.pojectList" :key="index">
-					<uni-td>{{poject.name}}</uni-td>
-					<uni-td>{{poject.price}}</uni-td>
-					<uni-td>{{poject.amount}}</uni-td>
-					<uni-td>{{poject.cost}}</uni-td>
+					<uni-td align="center">{{poject.name}}</uni-td>
+					<uni-td align="center">{{poject.price}}</uni-td>
+					<uni-td align="center">{{poject.amount}}</uni-td>
+					<uni-td align="center">{{poject.cost}}</uni-td>
 				</uni-tr>
 				<uni-tr>
-					<uni-td>总额</uni-td>
+					<uni-td align="center">总额</uni-td>
 					<uni-td></uni-td>
 					<uni-td></uni-td>
-					<uni-td>{{detail.total}}</uni-td>
+					<uni-td align="center">{{detail.total}}</uni-td>
 				</uni-tr>
 			</uni-table>
 			<uni-goods-nav :fill="true"  :options="options" :buttonGroup="buttonGroup" @buttonClick="buttonClick" />

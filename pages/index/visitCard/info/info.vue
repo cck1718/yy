@@ -72,6 +72,12 @@
 					return;
 				}
 			}
+		},
+		onLoad(e) {
+			this.name=e.name;
+			this.idCard=e.idCard;
+			this.address=e.address;
+			this.phone=e.phone;
 		}
 	}
 </script>

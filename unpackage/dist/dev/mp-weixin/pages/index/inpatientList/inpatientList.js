@@ -96,10 +96,10 @@ var components
 try {
   components = {
     uniList: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 260))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 316))
     },
     uniListItem: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 267))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 323))
     }
   }
 } catch (e) {
@@ -174,22 +174,43 @@ var _default =
 {
   data: function data() {
     return {
+      mark: 999,
       inpatientList: [{ id: 1, name: '张三' }, { id: 2, name: '李四' }],
       num: '' };
 
   },
   methods: {
+    to: function to(id) {
+      if (this.mark == 0) {
+        uni.navigateTo({
+          url: '/pages/index/inpatientList/inpatientBill/inpatientBill?id=' + id });
+
+      } else if (this.mark == 1) {
+        uni.navigateTo({
+          url: '/pages/index/inpatientList/inpatientInfo/inpatientInfo?id=' + id });
+
+      } else if (this.mark == 2) {
+        uni.navigateTo({
+          url: '/pages/index/inpatientList/inpatientPrepare/inpatientPrepare?id=' + id });
+
+      }
+    },
     /**
-              * 跳转到添加住院人页面
-              */
+        * 跳转到添加住院人页面
+        */
     toAdd: function toAdd() {
       uni.navigateTo({
         url: '/pages/index/inpatientList/addInpatient/addInpatient' });
 
     } },
 
-  onLoad: function onLoad() {
+  onLoad: function onLoad(e) {
+    //获取标记
+    this.mark = e.id;
+    console.log('e', e.id);
+
     //获取我的住院人信息
+    //剩余可添加住院人个数
     this.num = 10 - this.inpatientList.length;
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))

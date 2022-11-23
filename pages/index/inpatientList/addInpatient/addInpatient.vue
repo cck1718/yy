@@ -15,7 +15,8 @@
 	export default {
 		data() {
 			return {
-				visitCardList:[],
+				visitCardList:[{id:1,name:'张三',idCard:43092303236374658}],
+				visitCard:[{id:'',name:'',idCard:''}]
 			}
 		},
 		methods: {

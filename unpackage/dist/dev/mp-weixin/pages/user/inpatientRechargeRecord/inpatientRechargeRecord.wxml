@@ -1,1 +1,1 @@
-<view>住院充值记录</view>
+<view><view hidden="{{!(record)}}" style="display:flex;align-items:center;justify-content:center;"><text style="color:#808080;font-size:25rpx;">暂未查询到相关信息</text></view></view>

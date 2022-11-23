@@ -9,7 +9,7 @@
 		</view>
 		<button @click="open" class="btn1">确认上传</button>
 		<button @click="to" class="btn2">没带身份证，手输信息</button>
-		<a href="#" class="a" >一键授权，已有健康卡用户直接绑定></a>
+		<a href="/healthCard/healthCard" class="a" @click="toHealthCard">一键授权，已有健康卡用户直接绑定></a>
 	</view>
 </template>
 
@@ -42,6 +42,12 @@
 						console.log(JSON.stringify(res.tempFilePaths));
 						this.image=JSON.stringify(res.tempFilePaths);
 					}
+				})
+			},
+			//跳转到健康卡页面
+			toHealthCard(){
+				uni.navigateTo({
+					url:'/pages/healthCard/healthCard'
 				})
 			}
 		},

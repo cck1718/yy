@@ -1,7 +1,7 @@
 <template>
 	<view>
-		<uni-card title="添加就诊卡" @tap="to('/visitCard/visitCard')" v-show="!visitCard"></uni-card>
-		<uni-card :title=visitCard.userName :sub-title=visitCard.idCard border="false" @tap="toByElement('/pages/index/visitCard/detail/detail',visitCard.id)" v-show="visitCard">
+		<uni-card title="添加就诊卡" @tap="to('/visitCard/visitCard')" v-show="!healthCard"></uni-card>
+		<uni-card :title=healthCard.name :sub-title=healthCard.idCard border="false" @tap="toByElement('/pages/index/visitCard/detail/detail',healthCard.id)" v-show="healthCard">
 			
 			<uni-row class="demo-uni-row">
 				<uni-col :span="6" :push="5">
@@ -31,7 +31,7 @@
 				<text class="text">报告查询</text>
 			</uni-grid-item>
 
-			<uni-grid-item class="item" @tap="to('/inpatientList/inpatientList')">
+			<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',0)">
 				<uni-icons custom-prefix="iconfont" type="icon-zhuyuanqingdan" size="30"></uni-icons>
 				<text class="text">住院日清单</text>
 			</uni-grid-item>
@@ -76,7 +76,7 @@
 		
 		<uni-card title="住院服务"  isShadow="true">
 		    <uni-grid :column="4" :showBorder="false"  :square="false">
-		    	<uni-grid-item class="item" @tap="to('/inpatientList/inpatientList')">
+		    	<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',1)">
 		    		<uni-icons custom-prefix="iconfont" type="icon-lituixiurenyuanxinxixiugaichaxun" size="30"></uni-icons>
 		    		<text class="text">住院人信息</text>
 		    	</uni-grid-item>
@@ -84,11 +84,11 @@
 		    		<uni-icons custom-prefix="iconfont" type="icon-zhuyuanfeiyongx" size="30"></uni-icons>
 		    		<text class="text">住院充值</text>
 		    	</uni-grid-item>
-		    	<uni-grid-item class="item" @tap="to('/inpatientList/inpatientList')">
+		    	<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',2)">
 		    		<uni-icons custom-prefix="iconfont" type="icon-zhuyuanyuyue" size="30"></uni-icons>
 		    		<text class="text">住院预约</text>
 		    	</uni-grid-item>
-		    	<uni-grid-item class="item" @tap="to('/inpatientList/inpatientList')">
+		    	<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',3)">
 		    		<uni-icons custom-prefix="iconfont" type="icon-peihuguanli" size="30"></uni-icons>
 		    		<text class="text">住院陪护</text>
 		    	</uni-grid-item>
@@ -138,7 +138,7 @@
 	export default {
 		data() {
 			return {
-				visitCard:{id:1,userName:'张三',idCard:430923222231234231,idDefault:1},
+				healthCard:{id:1,name:'张三',idCard:430923222231234231,idDefault:1},
 				user:{id:1}
 			}
 		},
@@ -163,7 +163,7 @@
 		},
 		onLoad() {
 			//通过用户id获取默认就诊卡信息
-			//visitCard
+			//healthCard
 			
 			//获取登录信息
 		}

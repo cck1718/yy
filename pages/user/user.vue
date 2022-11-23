@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-card title="微信用户" thumbnail="/static/yonghu.png" note="Tips">
+		<uni-card title="微信用户" thumbnail="/static/geren.png">
 		<uni-list>
 			<uni-list-item title="电子健康卡" link showExtraIcon="true" to="/pages/user/myVisitCard/myVisitCard"></uni-list-item>
 			<uni-list-item title="挂号记录" link showExtraIcon="true" to="/pages/user/registerRecord/registerRecord"></uni-list-item>

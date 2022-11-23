@@ -31,7 +31,11 @@
     "pages/index/visitCard/detail/detail",
     "pages/index/visitCard/changePatient/changePatient",
     "pages/index/pay/payDetail/payDetail",
-    "pages/index/inpatientList/addInpatient/addInpatient"
+    "pages/index/inpatientList/addInpatient/addInpatient",
+    "pages/healthCard/healthCard",
+    "pages/index/inpatientList/inpatientBill/inpatientBill",
+    "pages/index/inpatientList/inpatientInfo/inpatientInfo",
+    "pages/index/inpatientList/inpatientPrepare/inpatientPrepare"
   ],
   "subPackages": [],
   "window": {
