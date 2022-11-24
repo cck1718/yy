@@ -112,6 +112,9 @@ try {
     },
     uniSection: function() {
       return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 365))
+    },
+    uniPopup: function() {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-popup/components/uni-popup/uni-popup */ "uni_modules/uni-popup/components/uni-popup/uni-popup").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-popup/components/uni-popup/uni-popup.vue */ 379))
     }
   }
 } catch (e) {
@@ -200,7 +203,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
 var _default =
 {
   data: function data() {
@@ -208,11 +210,17 @@ var _default =
       items: ['挂号', '介绍'],
       current: 0,
       id: '',
-      retisteBydoctor: [{ time: '下午14:30~15:00', order: '预约序号:14', cost: '￥80.00' }, { time: '下午15:30~16:00', order: '预约序号:15', cost: '￥80.00' }],
-      doctor: { id: 1, name: '张三', img: 'https://img2.baidu.com/it/u=1329314752,875125660&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400', position: '副主任医师', speciality: '多年临床经验，善于处理各种疑难杂症', introduce: '对该医生的介绍···' } };
+      retisteBydoctor: [{ id: 1, time: '下午14:30~15:00', order: '预约序号:14', cost: '￥80.00' }, { id: 2, time: '下午15:30~16:00', order: '预约序号:15', cost: '￥80.00' }],
+      doctor: { id: 1, name: '张三', dept: '发热科', img: 'https://img2.baidu.com/it/u=1329314752,875125660&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400', position: '副主任医师', speciality: '多年临床经验，善于处理各种疑难杂症', introduce: '对该医生的介绍···' },
+      order: { id: 1, name: '挂号', price: '27:00', time: '2022-11-24 16:30~17:00' } };
 
   },
   methods: {
+    open1: function open1(id) {
+      //通过id获取订单相详情
+
+      this.$refs.popup.open('bottom');
+    },
     btn1: function btn1() {
       this.mark = true;
     },

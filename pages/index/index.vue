@@ -76,7 +76,7 @@
 		
 		<uni-card title="住院服务"  isShadow="true">
 		    <uni-grid :column="4" :showBorder="false"  :square="false">
-		    	<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',1)">
+		    	<uni-grid-item class="item" @tap="toByElement('/inpatientList/inpatientList',1)">
 		    		<uni-icons custom-prefix="iconfont" type="icon-lituixiurenyuanxinxixiugaichaxun" size="30"></uni-icons>
 		    		<text class="text">住院人信息</text>
 		    	</uni-grid-item>

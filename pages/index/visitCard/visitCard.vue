@@ -1,11 +1,11 @@
 <template>
 	<view>
 		<uni-notice-bar text="本院实行实名制就诊，请如实填写就诊人信息，如因信息错误产生的一切后果"></uni-notice-bar>
-		<view class="box" @click="img()" v-if="image==''||image==null">
-			<uni-icons custom-prefix="iconfont" type="icon-zhaoxiang-copy" size="30"></uni-icons><br>
+		<view @click="img()" v-if="image==''||image==null" style="display: flex; align-items: center; justify-content: center;">
+			<image src="/static/sfz.jpg" style="width: 500rpx; height: 300rpx;"></image>	
 		</view>
-		<view class="box" v-else>
-			<img src=image alt="">
+		<view v-else style="display: flex; align-items: center; justify-content: center;">
+			<image :src=img></image>		
 		</view>
 		<button @click="open" class="btn1">确认上传</button>
 		<button @click="to" class="btn2">没带身份证，手输信息</button>
@@ -58,15 +58,6 @@
 .idcard{
 	margin: 50rpx;
 	background-color: #eee23e;
-}
-.box{
-	display: flex;
-	background-color: aliceblue;
-	width: 500rpx;
-	height: 250rpx;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
 }
 .btn1{
 	margin: 50rpx;

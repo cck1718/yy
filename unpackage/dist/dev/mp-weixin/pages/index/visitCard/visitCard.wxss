@@ -3,15 +3,6 @@
 	margin: 50rpx;
 	background-color: #eee23e;
 }
-.box{
-	display: flex;
-	background-color: aliceblue;
-	width: 500rpx;
-	height: 250rpx;
-	align-items: center;
-	justify-content: center;
-	margin: auto;
-}
 .btn1{
 	margin: 50rpx;
 	color: white;
