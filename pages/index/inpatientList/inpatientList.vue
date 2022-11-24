@@ -6,7 +6,7 @@
 				</uni-list-item>
 			</uni-list>
 		</view>
-		<view @click="toAdd" style="width: 700rpx; height: 300rpx; border: 1rpx; display: flex; justify-content: center; align-items: center; margin: 30rpx; border-style: dashed; border-color: #808080;">
+		<view @click="toAdd" style="width: 700rpx; height: 400rpx; border: 1rpx; display: flex; justify-content: center; align-items: center; margin: 30rpx; border-style: dashed; border-color: #808080;">
 			<text style="font-size: 30rpx;">添加住院人\n还可添加{{num}}人</text>
 		</view>
 	</view>
@@ -49,7 +49,6 @@
 		onLoad(e) {
 			//获取标记
 			this.mark=e.id;
-			console.log('e',e.id)
 			
 			//获取我的住院人信息
 			//剩余可添加住院人个数

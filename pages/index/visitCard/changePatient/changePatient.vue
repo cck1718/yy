@@ -24,15 +24,21 @@
 		},
 		methods: {
 			back(){
-				//保存当前设置
-				//返回上级页面
+				//修改默认就诊人并返回上级页面
+				let pages = getCurrentPages();
+				let prePage = pages[pages.length - 2];
+				for(let v of this.visitCardList){
+					if(v.isDefault == 1){
+						prePage.$vm.visitCard=v;
+					}
+				}
 				uni.navigateBack();
 			},
 			choose(id){
 				//通过isDefaul获取当前默认就诊卡 将isDefault改为0
 				//通过id获取当前就诊卡 将isDefault改为1
 				
-				//测试
+				//修改默认就诊卡
 				for(var visitCard of this.visitCardList){
 					if(visitCard.isDefault == 1){
 						visitCard.isDefault = 0;
@@ -43,6 +49,7 @@
 						visitCard.isDefault = 1;
 					}
 				}
+				console.log(this.visitCardList)
 			}
 		},
 		onLoad() {

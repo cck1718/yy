@@ -7,7 +7,7 @@
 				<uni-list-item  title="身份证" :rightText=visitCardDetail.idCard></uni-list-item>
 				<uni-list-item  title="手机号" :rightText=visitCardDetail.phone></uni-list-item>
 				<uni-list-item  title="登记号" :rightText=visitCardDetail.regNo></uni-list-item>
-				<uni-list-item  title="设为默认就诊人" showSwitch="true" switchChecked="true"></uni-list-item>
+				<uni-list-item  title="设为默认就诊人" showSwitch="true" switchChecked="true" switchChange="isDefault"></uni-list-item>
 			</uni-list>
 		</uni-card>
 		<button class="btn" @click="deleteById(visitCardDetail.id)">删除就诊人</button>
@@ -26,6 +26,13 @@
 				//删除就诊人信息
 				//退回上级页面
 				uni.navigateBack();
+			},
+			isDefault(){
+				if(this.visitCardDetail.isDefault == 1){
+					this.visitCardDetail.isDefault = 0;
+				}else {
+					this.visitCardDetail.isDefault = 1;
+				}
 			}
 		},
 		onLoad(e) {
