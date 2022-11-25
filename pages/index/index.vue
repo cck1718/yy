@@ -6,6 +6,7 @@
 		
 		<view >
 			<uni-card isShadow="false" isFull="false" :title=visitCard.name :sub-title=visitCard.idCard border="false" @tap="toByElement('/visitCard/detail/detail',visitCard.id)" v-show="visitCard">
+				
 				<uni-row class="demo-uni-row">
 					<uni-col :span="6" :push="5">
 						<text class="text"  @click="toOtherBar('/pages/user/myVisitCard/myVisitCard')">点我绑卡</text>

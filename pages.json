@@ -2,7 +2,13 @@
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
-			"navigationBarTitleText": "安化县人民医院"
+			"navigationBarTitleText": "安化县人民医院",
+			"navigationBarBackgroundColor": "#40e0d0",
+			"app-plus": {
+				"pullToRefresh": {
+					"support": true
+				}
+			}
 		}
 	},
 	{

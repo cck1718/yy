@@ -32,7 +32,7 @@
 	}
 	.btn{
 		margin: 30rpx;
-		background-color: #2edfa3;
+		background-color: #40e0d0;
 		color: white;
 	}
 </style>

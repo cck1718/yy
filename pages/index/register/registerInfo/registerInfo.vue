@@ -2,7 +2,7 @@
 	<view >
 		<uni-row class="demo-uni-row">
 			<uni-col :span="14">
-				<uni-data-checkbox v-model="value" :localdata="range" @change="change" mode="tag" selectedColor="#2edfa3"></uni-data-checkbox>
+				<uni-data-checkbox v-model="value" :localdata="range" @change="change" mode="tag" selectedColor="#40e0d0"></uni-data-checkbox>
 			</uni-col>
 			<uni-col :span="10">
 				<view v-show="value == 0" class="t">日期：{{time}}</view>

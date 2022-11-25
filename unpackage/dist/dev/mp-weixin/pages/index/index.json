@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "安化县人民医院",
+  "navigationBarBackgroundColor": "#40e0d0",
   "usingComponents": {
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uni-row": "/uni_modules/uni-row/components/uni-row/uni-row",
