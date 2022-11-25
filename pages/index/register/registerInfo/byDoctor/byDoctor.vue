@@ -17,14 +17,28 @@
 		        <uni-section title="介绍" :sub-title=doctor.introduce></uni-section>
 		    </view>
 				<uni-popup ref="popup" type="bottom" background-color="#fff">
+
+						<uni-list>
+							<uni-list-item title="医师" :rightText=doctor.name></uni-list-item>
+							<uni-list-item title="科室" :rightText=doctor.dept></uni-list-item>
+							<uni-list-item title="费用" :rightText=order.price></uni-list-item>
+							<uni-list-item title="时段" :rightText=order.time></uni-list-item>
+						</uni-list>
 					<uni-list>
-						<uni-list-item title="医师" :rightText=doctor.name></uni-list-item>
-						<uni-list-item title="科室" :rightText=doctor.dept></uni-list-item>
-						<uni-list-item title="费用" :rightText=order.price></uni-list-item>
-						<uni-list-item title="时段" :rightText=order.time></uni-list-item>
+						<uni-list-item title="请选择就诊人"></uni-list-item>
 					</uni-list>
-					<uni-card title="点击下方加号添加就诊人" isFull="false" extra="张三"></uni-card>
-					<button class="btn">确认挂号</button>
+					<uni-card>
+					<uni-list v-for="(visitCard, index) in visitCardList" :key="index">
+						<uni-list-item :title="visitCard.name" :note=visitCard.idCard clickable="true" @click="selectVisitCard(visitCard)">
+							<template v-slot:footer v-if="visitCard.isDefault == 1">
+								<view class="slot-box">
+									<text class="slot-text">已选择</text>
+								</view>
+							</template>
+						</uni-list-item>
+					</uni-list>
+					</uni-card>
+					<button class="btn" @click="toPay(order.id)">确认挂号</button>
 				</uni-popup>
 		</view>
 	</view>
@@ -39,7 +53,8 @@
 				id:'',
 				retisteBydoctor:[{id:1,time:'下午14:30~15:00', order:'预约序号:14',cost:'￥80.00'},{id:2,time:'下午15:30~16:00', order:'预约序号:15',cost:'￥80.00'}],
 				doctor:{id:1,name:'张三',dept:'发热科',img:'https://img2.baidu.com/it/u=1329314752,875125660&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400',position:'副主任医师',speciality:'多年临床经验，善于处理各种疑难杂症',introduce:'对该医生的介绍···'},
-				order:{id:1,name:'挂号',price:'27:00',time:'2022-11-24 16:30~17:00'}
+				order:{id:1,name:'挂号',price:'27:00',time:'2022-11-24 16:30~17:00'},
+				visitCardList:[{id:1,name:'张三',idCard:430923300428503943,isDefault:1},{id:2,name:'李四',idCard:430926500428503943,isDefault:0}]
 			}
 		},
 		methods: {
@@ -70,6 +85,25 @@
 			    if (this.current != e.currentIndex) {
 			        this.current = e.currentIndex;
 			    }
+			},
+			selectVisitCard(visitCard){
+				if(visitCard.isDefault != 1){
+					for(let item of this.visitCardList){
+						item.isDefault = 0;
+					}
+					visitCard.isDefault = 1;
+				}
+			},
+			toPay(id){
+				for(let item of this.visitCardList){
+					if(item.isDefault == 1){
+						//携带当前就诊卡去支付
+						//跳转到收银台
+						uni.navigateTo({
+							url:'/pages/payment/payment?id=' +id
+						})
+					}
+				}
 			}
 		},
 		onLoad(e) {

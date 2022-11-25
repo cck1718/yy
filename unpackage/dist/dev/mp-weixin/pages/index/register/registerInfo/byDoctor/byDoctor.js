@@ -171,7 +171,21 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function _createForOfIteratorHelper(o, allowArrayLike) {var it;if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) {if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") {if (it) o = it;var i = 0;var F = function F() {};return { s: F, n: function n() {if (i >= o.length) return { done: true };return { done: false, value: o[i++] };}, e: function e(_e) {throw _e;}, f: F };}throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");}var normalCompletion = true,didErr = false,err;return { s: function s() {it = o[Symbol.iterator]();}, n: function n() {var step = it.next();normalCompletion = step.done;return step;}, e: function e(_e2) {didErr = true;err = _e2;}, f: function f() {try {if (!normalCompletion && it.return != null) it.return();} finally {if (didErr) throw err;}} };}function _unsupportedIterableToArray(o, minLen) {if (!o) return;if (typeof o === "string") return _arrayLikeToArray(o, minLen);var n = Object.prototype.toString.call(o).slice(8, -1);if (n === "Object" && o.constructor) n = o.constructor.name;if (n === "Map" || n === "Set") return Array.from(o);if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);}function _arrayLikeToArray(arr, len) {if (len == null || len > arr.length) len = arr.length;for (var i = 0, arr2 = new Array(len); i < len; i++) {arr2[i] = arr[i];}return arr2;} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -212,7 +226,8 @@ var _default =
       id: '',
       retisteBydoctor: [{ id: 1, time: '下午14:30~15:00', order: '预约序号:14', cost: '￥80.00' }, { id: 2, time: '下午15:30~16:00', order: '预约序号:15', cost: '￥80.00' }],
       doctor: { id: 1, name: '张三', dept: '发热科', img: 'https://img2.baidu.com/it/u=1329314752,875125660&fm=253&fmt=auto&app=138&f=JPEG?w=400&h=400', position: '副主任医师', speciality: '多年临床经验，善于处理各种疑难杂症', introduce: '对该医生的介绍···' },
-      order: { id: 1, name: '挂号', price: '27:00', time: '2022-11-24 16:30~17:00' } };
+      order: { id: 1, name: '挂号', price: '27:00', time: '2022-11-24 16:30~17:00' },
+      visitCardList: [{ id: 1, name: '张三', idCard: 430923300428503943, isDefault: 1 }, { id: 2, name: '李四', idCard: 430926500428503943, isDefault: 0 }] };
 
   },
   methods: {
@@ -243,6 +258,25 @@ var _default =
       if (this.current != e.currentIndex) {
         this.current = e.currentIndex;
       }
+    },
+    selectVisitCard: function selectVisitCard(visitCard) {
+      if (visitCard.isDefault != 1) {var _iterator = _createForOfIteratorHelper(
+        this.visitCardList),_step;try {for (_iterator.s(); !(_step = _iterator.n()).done;) {var item = _step.value;
+            item.isDefault = 0;
+          }} catch (err) {_iterator.e(err);} finally {_iterator.f();}
+        visitCard.isDefault = 1;
+      }
+    },
+    toPay: function toPay(id) {var _iterator2 = _createForOfIteratorHelper(
+      this.visitCardList),_step2;try {for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {var item = _step2.value;
+          if (item.isDefault == 1) {
+            //携带当前就诊卡去支付
+            //跳转到收银台
+            uni.navigateTo({
+              url: '/pages/payment/payment?id=' + id });
+
+          }
+        }} catch (err) {_iterator2.e(err);} finally {_iterator2.f();}
     } },
 
   onLoad: function onLoad(e) {
@@ -250,6 +284,7 @@ var _default =
     //通过id获取当前医生信息存入doctor
     //传入当前时间获取当前医生挂号信息存入retisteBydoctor
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

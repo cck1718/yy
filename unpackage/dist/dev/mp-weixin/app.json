@@ -35,7 +35,8 @@
     "pages/healthCard/healthCard",
     "pages/index/inpatientList/inpatientBill/inpatientBill",
     "pages/index/inpatientList/inpatientInfo/inpatientInfo",
-    "pages/index/inpatientList/inpatientPrepare/inpatientPrepare"
+    "pages/index/inpatientList/inpatientPrepare/inpatientPrepare",
+    "pages/payment/payment"
   ],
   "subPackages": [],
   "window": {

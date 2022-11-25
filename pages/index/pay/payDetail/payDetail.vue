@@ -53,6 +53,9 @@
 			buttonClick (e) {
 				console.log('缴费')
 				//收银台
+				uni.navigateTo({
+					url:'/pages/payment/payment'
+				})
 			}
 		},
 		onLoad(e) {

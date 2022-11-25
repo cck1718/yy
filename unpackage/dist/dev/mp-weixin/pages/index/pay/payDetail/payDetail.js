@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -229,11 +229,15 @@ var _default =
     buttonClick: function buttonClick(e) {
       console.log('缴费');
       //收银台
+      uni.navigateTo({
+        url: '/pages/payment/payment' });
+
     } },
 
   onLoad: function onLoad(e) {
     //通过订单id e.id 获取当前代缴费项目的详细信息
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

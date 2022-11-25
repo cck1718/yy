@@ -1,42 +1,47 @@
 <template>
 	<view>
-		<uni-card title="添加就诊卡" @tap="to('/visitCard/visitCard')" v-show="!visitCard"></uni-card>
-		<uni-card :title=visitCard.name :sub-title=visitCard.idCard border="false" @tap="toByElement('/visitCard/detail/detail',visitCard.id)" v-show="visitCard">
-			
-			<uni-row class="demo-uni-row">
-				<uni-col :span="6" :push="5">
-					<text class="text"  @click="toOtherBar('/pages/user/myVisitCard/myVisitCard')">点我绑卡</text>
-				</uni-col>
-				<uni-col :span="6" :push="7">
-					<text class="text" @click="toByElement('/visitCard/changePatient/changePatient',user.id)">切换就诊人</text>
-				</uni-col>
-			</uni-row>
-		</uni-card>
+		<view>
+			<uni-card title="添加就诊卡" @tap="to('/visitCard/visitCard')" v-show="!visitCard" isFull="false"></uni-card>
+		</view>
 		
-		<uni-grid :column="3" :showBorder="false"  :square="false" isShadow="true">
-			<uni-grid-item class="item" @tap="toByElement('/register/register',visitCard.id)">
-				<uni-icons custom-prefix="iconfont" type="icon-yuyueguahao" size="30"></uni-icons>
-				<text class="text">预约挂号</text>
-			</uni-grid-item>
-			<uni-grid-item class="item" @tap="toByElement('/pay/pay',visitCard.id)">
-				<uni-icons custom-prefix="iconfont" type="icon-shebaojiaofei" size="30"></uni-icons>
-				<text class="text">门诊缴费</text>
-			</uni-grid-item>
-			<uni-grid-item class="item" @tap="toByElement('/nucleicAcid/nucleicAcid',visitCard.id)">
-				<uni-icons custom-prefix="iconfont" type="icon-hesuan" size="30"></uni-icons>
-				<text class="text">核酸检测</text>
-			</uni-grid-item>
-			<uni-grid-item class="item" @tap="toByElement('/report/report',visitCard.id)">
-				<uni-icons custom-prefix="iconfont" type="icon-baogaochaxun" size="30"></uni-icons>
-				<text class="text">报告查询</text>
-			</uni-grid-item>
+		<view >
+			<uni-card isShadow="false" isFull="false" :title=visitCard.name :sub-title=visitCard.idCard border="false" @tap="toByElement('/visitCard/detail/detail',visitCard.id)" v-show="visitCard">
+				<uni-row class="demo-uni-row">
+					<uni-col :span="6" :push="5">
+						<text class="text"  @click="toOtherBar('/pages/user/myVisitCard/myVisitCard')">点我绑卡</text>
+					</uni-col>
+					<uni-col :span="6" :push="7">
+						<text class="text" @click="toByElement('/visitCard/changePatient/changePatient',user.id)">切换就诊人</text>
+					</uni-col>
+				</uni-row>
+			</uni-card>
+		</view>
+		
+		<uni-card>
+			<uni-grid :column="3" :showBorder="false"  :square="false" isShadow="true">
+				<uni-grid-item class="item" @tap="toByElement('/register/register',visitCard.id)">
+					<uni-icons custom-prefix="iconfont" type="icon-yuyueguahao" size="30"></uni-icons>
+					<text class="text">预约挂号</text>
+				</uni-grid-item>
+				<uni-grid-item class="item" @tap="toByElement('/pay/pay',visitCard.id)">
+					<uni-icons custom-prefix="iconfont" type="icon-shebaojiaofei" size="30"></uni-icons>
+					<text class="text">门诊缴费</text>
+				</uni-grid-item>
+				<uni-grid-item class="item" @tap="toByElement('/nucleicAcid/nucleicAcid',visitCard.id)">
+					<uni-icons custom-prefix="iconfont" type="icon-hesuan" size="30"></uni-icons>
+					<text class="text">核酸检测</text>
+				</uni-grid-item>
+				<uni-grid-item class="item" @tap="toByElement('/report/report',visitCard.id)">
+					<uni-icons custom-prefix="iconfont" type="icon-baogaochaxun" size="30"></uni-icons>
+					<text class="text">报告查询</text>
+				</uni-grid-item>
 
-			<uni-grid-item class="item" @tap="toByElement('/inpatientList/inpatientList',0)">
-				<uni-icons custom-prefix="iconfont" type="icon-zhuyuanqingdan" size="30"></uni-icons>
-				<text class="text">住院日清单</text>
-			</uni-grid-item>
-		</uni-grid>
-		
+				<uni-grid-item class="item" @tap="toByElement('/inpatientList/inpatientList',0)">
+					<uni-icons custom-prefix="iconfont" type="icon-zhuyuanqingdan" size="30"></uni-icons>
+					<text class="text">住院日清单</text>
+				</uni-grid-item>
+			</uni-grid>
+		</uni-card>
 		<uni-card title="院前服务"  isShadow="true" v-show="false">
 		    <uni-grid :column="4" :showBorder="false"  :square="false">
 		    	<uni-grid-item class="item">
@@ -74,7 +79,7 @@
 		    </uni-grid>
 		</uni-card>
 		
-		<uni-card title="住院服务"  isShadow="true">
+		<uni-card title="住院服务"  isShadow="false">
 		    <uni-grid :column="4" :showBorder="false"  :square="false">
 		    	<uni-grid-item class="item" @tap="toByElement('/inpatientList/inpatientList',1)">
 		    		<uni-icons custom-prefix="iconfont" type="icon-lituixiurenyuanxinxixiugaichaxun" size="30"></uni-icons>

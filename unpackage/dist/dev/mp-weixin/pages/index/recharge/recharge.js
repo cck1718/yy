@@ -187,16 +187,24 @@ var _default =
       mark: true,
       value: 0,
       inpatientCard: {},
-      range: [{ "value": 200, "text": "￥200" }, { "value": 500, "text": "￥500" }, { "value": 1000, "text": "￥1000" }, { "value": 2000, "text": "￥2000" }, { "value": 3000, "text": "￥3000" }, { "value": 5000, "text": "￥5000" }, { "value": 8000, "text": "￥8000" }, { "value": 10000, "text": "￥10000" }, { "value": 20000, "text": "￥20000" }] };
+      range: [{ "value": 200, "text": "￥200" }, { "value": 500, "text": "￥500" }, { "value": 1000, "text": "￥1000" }, { "value": 2000, "text": "￥2000" }, { "value": 3000, "text": "￥3000" }, { "value": 5000, "text": "￥5000" }, { "value": 8000, "text": "￥8000" }, { "value": 10000, "text": "￥10000" }, { "value": 20000, "text": "￥20000" }],
+      order: { id: 1, name: '住院充值', price: '3000:00', visitName: '李四', visitIdCard: '43092320049578385', hospital: '安化县人民医院' } };
 
   },
   methods: {
     change: function change(e) {
+      //console.log(e.detail.value)
+      //根据金额生成订单
+      //跳转到收银台
+      uni.navigateTo({
+        url: '/pages/payment/payment?id?' + this.order.id });
 
     },
     //充值方法
     recharge: function recharge() {
       //充值
+      uni.navigateTo({
+        url: '/pages/payment/payment' });
 
     },
     //添加住院人
