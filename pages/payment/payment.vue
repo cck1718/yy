@@ -27,7 +27,11 @@
 			}
 		},
 		methods: {
-			
+			payment(){
+				uni.requestPayment({
+					provider:'wxpay'
+				})
+			}
 		}
 	}
 </script>

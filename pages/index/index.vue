@@ -165,15 +165,45 @@
 				uni.navigateTo({
 					url: url1
 				})
+			},
+			login(){
+				wx.login({
+					success(res){
+						if(res.code){
+							//携带登录凭证向后端发起登录请求
+							// uni.request({
+							// 	url: '',
+							// 	data:{code:res.code}
+							// })
+							console.log("code",res.code)
+						}else{
+							console.log("登录失败")
+						}
+					}
+				})
 			}
 		},
 		onLoad(e) {
+			// this.login();
 			//通过用户id获取默认就诊卡信息
 			
 			
 			//healthCard
 			
 			//获取登录信息
+		},
+		onLaunch() {
+			//this.login();
+		},
+		onShareAppMessage(res) {
+			return{
+				title:'安化县人民医院'
+			}
+		},
+		onShareTimeline(res) {
+			return{
+				title:'安化县人民医院'
+			}
 		}
 	}
 </script>

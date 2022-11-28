@@ -106,22 +106,22 @@ var components
 try {
   components = {
     uniCard: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 256))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-card/components/uni-card/uni-card */ "uni_modules/uni-card/components/uni-card/uni-card").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-card/components/uni-card/uni-card.vue */ 266))
     },
     uniRow: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 263))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-row/uni-row */ "uni_modules/uni-row/components/uni-row/uni-row").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-row/uni-row.vue */ 273))
     },
     uniCol: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 270))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-row/components/uni-col/uni-col */ "uni_modules/uni-row/components/uni-col/uni-col").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-row/components/uni-col/uni-col.vue */ 280))
     },
     uniGrid: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid/uni-grid */ "uni_modules/uni-grid/components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid/uni-grid.vue */ 277))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid/uni-grid */ "uni_modules/uni-grid/components/uni-grid/uni-grid").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid/uni-grid.vue */ 287))
     },
     uniGridItem: function() {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid-item/uni-grid-item */ "uni_modules/uni-grid/components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue */ 284))
+      return __webpack_require__.e(/*! import() | uni_modules/uni-grid/components/uni-grid-item/uni-grid-item */ "uni_modules/uni-grid/components/uni-grid-item/uni-grid-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue */ 294))
     },
     uniIcons: function() {
-      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 291))
+      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 301))
     }
   }
 } catch (e) {
@@ -343,15 +343,45 @@ var _default =
       uni.navigateTo({
         url: url1 });
 
+    },
+    login: function login() {
+      wx.login({
+        success: function success(res) {
+          if (res.code) {
+            //携带登录凭证向后端发起登录请求
+            // uni.request({
+            // 	url: '',
+            // 	data:{code:res.code}
+            // })
+            console.log("code", res.code);
+          } else {
+            console.log("登录失败");
+          }
+        } });
+
     } },
 
   onLoad: function onLoad(e) {
+    // this.login();
     //通过用户id获取默认就诊卡信息
 
 
     //healthCard
 
     //获取登录信息
+  },
+  onLaunch: function onLaunch() {
+    //this.login();
+  },
+  onShareAppMessage: function onShareAppMessage(res) {
+    return {
+      title: '安化县人民医院' };
+
+  },
+  onShareTimeline: function onShareTimeline(res) {
+    return {
+      title: '安化县人民医院' };
+
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

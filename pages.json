@@ -244,6 +244,22 @@
             }
             
         }
+        ,{
+            "path" : "pages/index/report/reportDetail0/reportDetail0",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "检查报告详情"
+            }
+            
+        }
+        ,{
+            "path" : "pages/index/report/reportDetail1/reportDetail1",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "检验报告详情"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

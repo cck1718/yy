@@ -36,7 +36,9 @@
     "pages/index/inpatientList/inpatientBill/inpatientBill",
     "pages/index/inpatientList/inpatientInfo/inpatientInfo",
     "pages/index/inpatientList/inpatientPrepare/inpatientPrepare",
-    "pages/payment/payment"
+    "pages/payment/payment",
+    "pages/index/report/reportDetail0/reportDetail0",
+    "pages/index/report/reportDetail1/reportDetail1"
   ],
   "subPackages": [],
   "window": {
