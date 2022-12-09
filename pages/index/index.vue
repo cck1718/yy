@@ -90,57 +90,14 @@
 		    		<uni-icons custom-prefix="iconfont" type="icon-zhuyuanfeiyongx" size="30"></uni-icons>
 		    		<text class="text">住院充值</text>
 		    	</uni-grid-item>
-		    	<!-- <uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',2)">
-		    		<uni-icons custom-prefix="iconfont" type="icon-zhuyuanyuyue" size="30"></uni-icons>
-		    		<text class="text">住院预约</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item" @tap="toByElement('/pages/index/inpatientList/inpatientList',3)">
-		    		<uni-icons custom-prefix="iconfont" type="icon-peihuguanli" size="30"></uni-icons>
-		    		<text class="text">住院陪护</text>
-		    	</uni-grid-item> -->
 		    </uni-grid>
 		</uni-card>
-		
-		<uni-card title="延续服务"  isShadow="true" v-show="false">
-		    <uni-grid :column="4" :showBorder="false"  :square="false">
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="plus-filled" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">满意度调查</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="shop" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">网约护理</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="personadd-filled" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">全病程服务</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="search" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">院内导航</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="personadd-filled" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">检查导航</text>
-		    	</uni-grid-item>
-		    	<uni-grid-item class="item">
-		    		<uni-icons type="list" size="30" class="uni-grid-item-icon"></uni-icons>
-		    		<text class="text">食堂点餐</text>
-		    	</uni-grid-item>
-				<uni-grid-item class="item">
-					<uni-icons type="list" size="30" class="uni-grid-item-icon"></uni-icons>
-					<text class="text">用药指导</text>
-				</uni-grid-item>
-				<uni-grid-item class="item">
-					<uni-icons type="list" size="30" class="uni-grid-item-icon"></uni-icons>
-					<text class="text">医保凭证</text>
-				</uni-grid-item>
-		    </uni-grid>
-		</uni-card>
+	
 	</view>
 </template>
 
 <script>
+	import api from '@/request/request.js'
 	export default {
 		data() {
 			return {
@@ -165,28 +122,11 @@
 				uni.navigateTo({
 					url: url1
 				})
-			},
-			login(){
-				wx.login({
-					success(res){
-						if(res.code){
-							//携带登录凭证向后端发起登录请求
-							// uni.request({
-							// 	url: '',
-							// 	data:{code:res.code}
-							// })
-							console.log("code",res.code)
-						}else{
-							console.log("登录失败")
-						}
-					}
-				})
 			}
 		},
 		onLoad(e) {
 			// this.login();
 			//通过用户id获取默认就诊卡信息
-			
 			
 			//healthCard
 			

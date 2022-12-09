@@ -1,5 +1,8 @@
 <template>
-	<view>
+	<view v-if="!token">
+		登录
+	</view>
+	<view v-else>
 		<uni-card title="微信用户" thumbnail="/static/geren.png">
 		<uni-list>
 			<uni-list-item title="电子健康卡" link showExtraIcon="true" to="/pages/user/myVisitCard/myVisitCard"></uni-list-item>
@@ -12,7 +15,6 @@
 			 --><uni-list-item title="我的收藏" link showExtraIcon="true" to="/pages/user/myCollection/myCollection"></uni-list-item>
 		</uni-list>
 		</uni-card>
-		
 	</view>
 </template>
 
@@ -24,6 +26,9 @@
 			}
 		},
 		methods: {
+
+		},
+		onLaunch() {
 
 		}
 	}

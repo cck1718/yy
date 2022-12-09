@@ -38,7 +38,8 @@
     "pages/index/inpatientList/inpatientPrepare/inpatientPrepare",
     "pages/payment/payment",
     "pages/index/report/reportDetail0/reportDetail0",
-    "pages/index/report/reportDetail1/reportDetail1"
+    "pages/index/report/reportDetail1/reportDetail1",
+    "pages/user/login/login"
   ],
   "subPackages": [],
   "window": {
@@ -69,5 +70,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

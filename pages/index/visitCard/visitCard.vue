@@ -5,7 +5,7 @@
 			<image src="/static/sfz.jpg" style="width: 500rpx; height: 300rpx;"></image>	
 		</view>
 		<view v-else style="display: flex; align-items: center; justify-content: center;">
-			<image :src=img></image>		
+			<image :src=item></image>		
 		</view>
 		<button @click="open" class="btn1">确认上传</button>
 		<button @click="to" class="btn2">没带身份证，手输信息</button>
@@ -14,10 +14,12 @@
 </template>
 
 <script>
+			const that = this;
 	export default {
 		data() {
 			return {
-				image:''
+				imagePath:'',
+				imgList:[],
 			}
 		},
 		methods: {
@@ -39,8 +41,10 @@
 				uni.chooseImage({
 					count:1,
 					success(res) {
-						console.log(JSON.stringify(res.tempFilePaths));
-						this.image=JSON.stringify(res.tempFilePaths);
+						console.log('tempFiles',JSON.stringify(res.tempFiles));
+						console.log('tempFiles',JSON.stringify(res.tempFilePaths));
+						//JSON.stringify(res.tempFilePaths);
+						//this.imgList.push(res.tempFilePaths[0])
 					}
 				})
 			},

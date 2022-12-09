@@ -260,6 +260,14 @@
             }
             
         }
+        ,{
+            "path" : "pages/user/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户登录"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

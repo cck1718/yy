@@ -3,7 +3,6 @@
   "usingComponents": {
     "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
     "uni-segmented-control": "/uni_modules/uni-segmented-control/components/uni-segmented-control/uni-segmented-control",
-    "uni-calendar": "/uni_modules/uni-calendar/components/uni-calendar/uni-calendar",
     "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list",
     "uni-list-item": "/uni_modules/uni-list/components/uni-list-item/uni-list-item",
     "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",

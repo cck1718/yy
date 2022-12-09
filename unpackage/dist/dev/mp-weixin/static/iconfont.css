@@ -14,32 +14,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tianjia:before {
-  content: "\e657";
-}
-
-.icon-zhaoxiang-copy:before {
-  content: "\e8c6";
-}
-
 .icon-yisheng:before {
   content: "\e6ef";
 }
 
-.icon-dianhua:before {
-  content: "\e8c3";
-}
-
 .icon-keshijieshao-copy-copy:before {
   content: "\e8c5";
-}
-
-.icon-qingdantianchong:before {
-  content: "\e6ad";
-}
-
-.icon-guahao:before {
-  content: "\e867";
 }
 
 .icon-shebaojiaofei:before {
@@ -54,10 +34,6 @@
   content: "\e689";
 }
 
-.icon-zhuyuanyuyue:before {
-  content: "\e696";
-}
-
 .icon-zhuyuanfeiyongx:before {
   content: "\e60e";
 }
@@ -68,10 +44,6 @@
 
 .icon-baogaochaxun:before {
   content: "\e611";
-}
-
-.icon-peihuguanli:before {
-  content: "\e600";
 }
 
 .icon-hesuan:before {

@@ -7,7 +7,7 @@
 			<uni-list-item :title=visitCard.name :note=visitCard.inpatientId rightText="点击切换住院人" clickable="true" @click="changeInpatient"></uni-list-item>
 		</uni-list>
 		<uni-card title="选择充值金额" extra="123">
-			<uni-data-checkbox selectedColor="#2edfa3" mode="tag" v-model="value" :localdata="range" @change="change"></uni-data-checkbox>
+			<uni-data-checkbox selectedColor="#2edfa3" mode="tag" v-model="value" :localdata="range"></uni-data-checkbox>
 			<button class="btn" @click="recharge">充值</button>
 		</uni-card>
 	</view>
