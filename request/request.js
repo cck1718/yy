@@ -12,3 +12,5 @@ export let params = {
 		}
 	}
 }
+export const uurl = 'https://api.weixin.qq.com/sns/jscode2session';
+export const appInfo = {appid:'wx743d1ccae179cfca',secret:'6c1efa595166a24757494281cc5ee43e',js_code:''};

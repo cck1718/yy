@@ -292,6 +292,7 @@ var _request = __webpack_require__(/*! @/request/request.js */ 19);function _int
         }} catch (err) {_iterator3.e(err);} finally {_iterator3.f();}
       console.log(this.registerPlus);
     },
+    //医生号源接口
     getDoctorPre: function getDoctorPre(ysdm, time) {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _yield$uni$$http$post, res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                 _request.params.request.head.tranCode = "CYYGH007";
                 _request.params.request.body = { "ysdm": ysdm, "ksrq": time, "jsrq": time };_context.next = 4;return (
@@ -300,6 +301,7 @@ var _request = __webpack_require__(/*! @/request/request.js */ 19);function _int
                 console.log("ysdm", ysdm);
                 _this.getPB(_this.doctor[0].pbxh);case 9:case "end":return _context.stop();}}}, _callee);}))();
     },
+    //排版接口
     getPB: function getPB(pbxh) {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var _yield$uni$$http$post2, res;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
                 _request.params.request.head.tranCode = "CYYGH008";
                 _request.params.request.body = { "pbxh": pbxh };_context2.next = 4;return (
@@ -309,12 +311,13 @@ var _request = __webpack_require__(/*! @/request/request.js */ 19);function _int
                 console.log("body", _this2.retisteBydoctor);
                 _this2.plus();case 10:case "end":return _context2.stop();}}}, _callee2);}))();
     },
+    //预算接口 根据返回的信息生成收据单
     prePay: function prePay(patid, pbxh) {return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var _yield$uni$$http$post3, res;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
                 _request.params.request.head.tranCode = "B201";
                 _request.params.request.body = { "patid": patid, "pbmxxh": pbxh, "czksfbz": '0' };_context3.next = 4;return (
                   uni.$http.post(_request.url, _request.params));case 4:_yield$uni$$http$post3 = _context3.sent;res = _yield$uni$$http$post3.data;
                 console.log("prePay", res);return _context3.abrupt("return",
-                res);case 8:case "end":return _context3.stop();}}}, _callee3);}))();
+                res.reponse.body);case 8:case "end":return _context3.stop();}}}, _callee3);}))();
     } },
 
   onLoad: function onLoad(e) {

@@ -97,7 +97,8 @@
 </template>
 
 <script>
-	import api from '@/request/request.js'
+	import { appInfo } from '@/request/request.js'
+	import { urll } from '@/request/request.js'
 	export default {
 		data() {
 			return {
@@ -122,10 +123,36 @@
 				uni.navigateTo({
 					url: url1
 				})
+			},
+			login(){
+				wx.login({
+				  success (res) {
+				    if (res.code) {
+				      //获取 OpenID
+					  appInfo.js_code=res.code;
+				      wx.request({
+						  url:'https://api.weixin.qq.com/sns/jscode2session',
+						  data:{
+							  appid:'wx743d1ccae179cfca',
+							  secret:'6c1efa595166a24757494281cc5ee43e',
+							  js_code: res.code,
+							  grant_type:'authorization_code'
+						  },
+						  success(ress){
+							  console.log(ress)
+						  }
+					  })
+					  console.log('re',re)
+					  console.log('code',res.code)
+				    } else {
+				      console.log('登录失败！' + res.errMsg)
+				    }
+				  }
+				})
 			}
 		},
 		onLoad(e) {
-			// this.login();
+			this.login();
 			//通过用户id获取默认就诊卡信息
 			
 			//healthCard

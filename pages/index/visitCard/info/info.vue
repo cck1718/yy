@@ -11,16 +11,8 @@
 			<uni-forms-item label="住址">
 				<uni-easyinput type="text" v-model="address" placeholder="请输入住址" />
 			</uni-forms-item>
-			<uni-forms-item label="手机号" v-if="flag==1">
-				<uni-easyinput type="text" v-model="phone" placeholder="请输入手机号" />
-			</uni-forms-item>
-				<button class="btn" v-if="flag==1">获取验证码</button>
-			<uni-forms-item label="验证码" v-if="flag==1">
-				<uni-easyinput type="text" v-model="code" placeholder="请输入验证码" />
-			</uni-forms-item>
 		</view>
-		<button class="btn" @click="select1" v-if="flag==0">立即查询</button>
-		<button class="btn" @click="select2" v-if="flag==1">立即绑定</button>
+		<button class="btn" @click="select">立即绑定</button>
 	</view>
 </template>
 
@@ -32,12 +24,11 @@
 				idCard:'',
 				address:'',
 				phone:'',
-				code:'',
-				flag:0
+				code:''
 			}
 		},
 		methods: {
-			select1(){
+			select(){
 				if(this.name == null || this.name == '' || typeof this.name != 'string' || this.name.length < 2 || this.name.length > 20){
 					uni.showToast({
 						title:'请输入2-20位合法姓名',
@@ -62,22 +53,12 @@
 				this.flag=1;
 				return;
 			},
-			select2(){
-				if(this.code == null || this.code == ''){
-					uni.showToast({
-						title:'请输入验证码',
-						icon:'none'
-					});
-					//调用接口验证信息
-					return;
-				}
-			}
+
 		},
 		onLoad(e) {
 			this.name=e.name;
 			this.idCard=e.idCard;
 			this.address=e.address;
-			this.phone=e.phone;
 		}
 	}
 </script>

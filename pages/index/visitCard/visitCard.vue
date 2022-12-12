@@ -1,11 +1,11 @@
 <template>
 	<view>
 		<uni-notice-bar text="本院实行实名制就诊，请如实填写就诊人信息，如因信息错误产生的一切后果"></uni-notice-bar>
-		<view @click="img()" v-if="image==''||image==null" style="display: flex; align-items: center; justify-content: center;">
+		<view @click="img()" v-if="imgUrl==''||imgUrl==null" style="display: flex; align-items: center; justify-content: center;">
 			<image src="/static/sfz.jpg" style="width: 500rpx; height: 300rpx;"></image>	
 		</view>
 		<view v-else style="display: flex; align-items: center; justify-content: center;">
-			<image :src=item></image>		
+			<img :src=imgUrl></img>		
 		</view>
 		<button @click="open" class="btn1">确认上传</button>
 		<button @click="to" class="btn2">没带身份证，手输信息</button>
@@ -14,12 +14,11 @@
 </template>
 
 <script>
-			const that = this;
 	export default {
 		data() {
 			return {
 				imagePath:'',
-				imgList:[],
+				imgUrl:'',
 			}
 		},
 		methods: {
@@ -38,13 +37,26 @@
 			},
 			//上传图片
 			img(){
+				let that = this;
 				uni.chooseImage({
 					count:1,
-					success(res) {
-						console.log('tempFiles',JSON.stringify(res.tempFiles));
-						console.log('tempFiles',JSON.stringify(res.tempFilePaths));
+					sizetype: ['original','compressed'],
+					sourceType: ['album','canera'],
+					success:function(res) {
+						that.imgUrl = res.tempFilePaths[0];
+						uni.getFileSystemManager().readFile({
+							filePath: that.imgUrl,
+							encoding: 'base64',
+							success: r =>{
+								console.log('r.data',r.data);
+								that.imgUrl = 'data:image/jpg;base64,' + r.data;
+								console.log('that.imgUrl',that.imgUrl);
+							}
+						})
+						//console.log('tempFiles',JSON.stringify(res.tempFiles));
+						//console.log('tempFiles',JSON.stringify(res.tempFilePaths));
 						//JSON.stringify(res.tempFilePaths);
-						//this.imgList.push(res.tempFilePaths[0])
+						//this.imgUrl.push(res.tempFilePaths[0])
 					}
 				})
 			},

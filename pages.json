@@ -299,5 +299,8 @@
 				"selectedIconPath": "static/geren02.png"
 			}
 		]
+	},
+	"easycom":{
+		"^u-(.*)":"uview-ui/components/u-$1/u-$1.vue"
 	}
 }

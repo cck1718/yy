@@ -1464,7 +1464,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2760,7 +2760,7 @@ var $http = new Request();exports.$http = $http;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.params = exports.url = void 0;var url = 'http://111.22.120.128:58081/spsMsg';exports.url = url;
+Object.defineProperty(exports, "__esModule", { value: true });exports.appInfo = exports.uurl = exports.params = exports.url = void 0;var url = 'http://111.22.120.128:58081/spsMsg';exports.url = url;
 var params = {
   "request": {
     "head": {
@@ -2771,6 +2771,11 @@ var params = {
       "version": "2.0" },
 
     "body": {} } };exports.params = params;
+
+
+
+var uurl = 'https://api.weixin.qq.com/sns/jscode2session';exports.uurl = uurl;
+var appInfo = { appid: 'wx743d1ccae179cfca', secret: '6c1efa595166a24757494281cc5ee43e', js_code: '' };exports.appInfo = appInfo;
 
 /***/ }),
 
@@ -4518,7 +4523,7 @@ module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": [{ "path": "pages/index/index", "style": { "navigationBarTitleText": "安化县人民医院", "navigationBarBackgroundColor": "#40e0d0", "app-plus": { "pullToRefresh": { "support": true } } } }, { "path": "pages/index/visitCard/visitCard", "style": { "navigationBarTitleText": "申领电子健康卡" } }, { "path": "pages/index/visitCard/info/info", "style": { "navigationBarTitleText": "申领电子健康卡" } }, { "path": "pages/index/register/register", "style": { "navigationBarTitleText": "科室列表" } }, { "path": "pages/index/register/registerInfo/registerInfo" }, { "path": "pages/index/pay/pay", "style": { "navigationBarTitleText": "代缴费列表" } }, { "path": "pages/index/nucleicAcid/nucleicAcid", "style": { "navigationBarTitleText": "申请核酸" } }, { "path": "pages/index/inpatientList/inpatientList", "style": { "navigationBarTitleText": "我的住院人" } }, { "path": "pages/index/report/report", "style": { "navigationBarTitleText": "我的就诊人" } }, { "path": "pages/index/recharge/recharge", "style": { "navigationBarTitleText": "住院充值" } }, { "path": "pages/info/info", "style": { "navigationBarTitleText": "医院信息" } }, { "path": "pages/info/departmentInfo/departmentInfo", "style": { "navigationBarTitleText": "科室列表" } }, { "path": "pages/info/departmentInfo/dept/dept", "style": { "navigationBarTitleText": "科室信息" } }, { "path": "pages/info/departmentInfo/doct/doct", "style": { "navigationBarTitleText": "医生信息" } }, { "path": "pages/info/departmentInfo/doct/doctInfo/doctInfo", "style": { "navigationBarTitleText": "医生主页" } }, { "path": "pages/user/user", "style": { "navigationBarTitleText": "个人信息" } }, { "path": "pages/user/myVisitCard/myVisitCard", "style": { "navigationBarTitleText": "我的就诊卡" } }, { "path": "pages/user/registerRecord/registerRecord", "style": { "navigationBarTitleText": "挂号记录" } }, { "path": "pages/user/payRecord/payRecord", "style": { "navigationBarTitleText": "门诊缴费记录" } }, { "path": "pages/user/inpatientRechargeRecord/inpatientRechargeRecord", "style": { "navigationBarTitleText": "住院充值记录" } }, { "path": "pages/user/outpatientMedicalRecord/outpatientMedicalRecord", "style": { "navigationBarTitleText": "门诊病历记录" } }, { "path": "pages/user/physicalExamPayRecord/physicalExamPayRecord", "style": { "navigationBarTitleText": "体检缴费记录" } }, { "path": "pages/user/checkAppointment/checkAppointment", "style": { "navigationBarTitleText": "检查预约" } }, { "path": "pages/user/myCollection/myCollection", "style": { "navigationBarTitleText": "我的收藏" } }, { "path": "pages/notify/notify", "style": { "navigationBarTitleText": "病友告知" } }, { "path": "pages/index/nucleicAcid/survey/survey", "style": { "navigationBarTitleText": "问卷调查" } }, { "path": "pages/index/register/registerInfo/byDoctor/byDoctor", "style": { "navigationBarTitleText": "医生主页" } }, { "path": "pages/index/report/checkoutReport/checkoutReport", "style": { "navigationBarTitleText": "检验检查报告" } }, { "path": "pages/index/visitCard/detail/detail", "style": { "navigationBarTitleText": "就诊人详情" } }, { "path": "pages/index/visitCard/changePatient/changePatient", "style": { "navigationBarTitleText": "切换就诊人" } }, { "path": "pages/index/pay/payDetail/payDetail", "style": { "navigationBarTitleText": "待缴费详情" } }, { "path": "pages/index/inpatientList/addInpatient/addInpatient", "style": { "navigationBarTitleText": "添加住院人" } }, { "path": "pages/healthCard/healthCard", "style": { "navigationBarTitleText": "健康卡" } }, { "path": "pages/index/inpatientList/inpatientBill/inpatientBill", "style": { "navigationBarTitleText": "住院日清单" } }, { "path": "pages/index/inpatientList/inpatientInfo/inpatientInfo", "style": { "navigationBarTitleText": "住院人详情" } }, { "path": "pages/index/inpatientList/inpatientPrepare/inpatientPrepare", "style": { "navigationBarTitleText": "住院预约" } }, { "path": "pages/payment/payment", "style": { "navigationBarTitleText": "收银台" } }, { "path": "pages/index/report/reportDetail0/reportDetail0", "style": { "navigationBarTitleText": "检查报告详情" } }, { "path": "pages/index/report/reportDetail1/reportDetail1", "style": { "navigationBarTitleText": "检验报告详情" } }, { "path": "pages/user/login/login", "style": { "navigationBarTitleText": "用户登录" } }], "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "安化县人民医院", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8", "app-plus": { "background": "#efeff4" } }, "tabBar": { "list": [{ "pagePath": "pages/index/index", "text": "首页", "iconPath": "static/shouye.png", "selectedIconPath": "static/shouye02.png" }, { "pagePath": "pages/info/info", "text": "医院信息", "iconPath": "static/yiyuan.png", "selectedIconPath": "static/yiyuan02.png" }, { "pagePath": "pages/user/user", "text": "个人中心", "iconPath": "static/geren.png", "selectedIconPath": "static/geren02.png" }] } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": [{ "path": "pages/index/index", "style": { "navigationBarTitleText": "安化县人民医院", "navigationBarBackgroundColor": "#40e0d0", "app-plus": { "pullToRefresh": { "support": true } } } }, { "path": "pages/index/visitCard/visitCard", "style": { "navigationBarTitleText": "申领电子健康卡" } }, { "path": "pages/index/visitCard/info/info", "style": { "navigationBarTitleText": "申领电子健康卡" } }, { "path": "pages/index/register/register", "style": { "navigationBarTitleText": "科室列表" } }, { "path": "pages/index/register/registerInfo/registerInfo" }, { "path": "pages/index/pay/pay", "style": { "navigationBarTitleText": "代缴费列表" } }, { "path": "pages/index/nucleicAcid/nucleicAcid", "style": { "navigationBarTitleText": "申请核酸" } }, { "path": "pages/index/inpatientList/inpatientList", "style": { "navigationBarTitleText": "我的住院人" } }, { "path": "pages/index/report/report", "style": { "navigationBarTitleText": "我的就诊人" } }, { "path": "pages/index/recharge/recharge", "style": { "navigationBarTitleText": "住院充值" } }, { "path": "pages/info/info", "style": { "navigationBarTitleText": "医院信息" } }, { "path": "pages/info/departmentInfo/departmentInfo", "style": { "navigationBarTitleText": "科室列表" } }, { "path": "pages/info/departmentInfo/dept/dept", "style": { "navigationBarTitleText": "科室信息" } }, { "path": "pages/info/departmentInfo/doct/doct", "style": { "navigationBarTitleText": "医生信息" } }, { "path": "pages/info/departmentInfo/doct/doctInfo/doctInfo", "style": { "navigationBarTitleText": "医生主页" } }, { "path": "pages/user/user", "style": { "navigationBarTitleText": "个人信息" } }, { "path": "pages/user/myVisitCard/myVisitCard", "style": { "navigationBarTitleText": "我的就诊卡" } }, { "path": "pages/user/registerRecord/registerRecord", "style": { "navigationBarTitleText": "挂号记录" } }, { "path": "pages/user/payRecord/payRecord", "style": { "navigationBarTitleText": "门诊缴费记录" } }, { "path": "pages/user/inpatientRechargeRecord/inpatientRechargeRecord", "style": { "navigationBarTitleText": "住院充值记录" } }, { "path": "pages/user/outpatientMedicalRecord/outpatientMedicalRecord", "style": { "navigationBarTitleText": "门诊病历记录" } }, { "path": "pages/user/physicalExamPayRecord/physicalExamPayRecord", "style": { "navigationBarTitleText": "体检缴费记录" } }, { "path": "pages/user/checkAppointment/checkAppointment", "style": { "navigationBarTitleText": "检查预约" } }, { "path": "pages/user/myCollection/myCollection", "style": { "navigationBarTitleText": "我的收藏" } }, { "path": "pages/notify/notify", "style": { "navigationBarTitleText": "病友告知" } }, { "path": "pages/index/nucleicAcid/survey/survey", "style": { "navigationBarTitleText": "问卷调查" } }, { "path": "pages/index/register/registerInfo/byDoctor/byDoctor", "style": { "navigationBarTitleText": "医生主页" } }, { "path": "pages/index/report/checkoutReport/checkoutReport", "style": { "navigationBarTitleText": "检验检查报告" } }, { "path": "pages/index/visitCard/detail/detail", "style": { "navigationBarTitleText": "就诊人详情" } }, { "path": "pages/index/visitCard/changePatient/changePatient", "style": { "navigationBarTitleText": "切换就诊人" } }, { "path": "pages/index/pay/payDetail/payDetail", "style": { "navigationBarTitleText": "待缴费详情" } }, { "path": "pages/index/inpatientList/addInpatient/addInpatient", "style": { "navigationBarTitleText": "添加住院人" } }, { "path": "pages/healthCard/healthCard", "style": { "navigationBarTitleText": "健康卡" } }, { "path": "pages/index/inpatientList/inpatientBill/inpatientBill", "style": { "navigationBarTitleText": "住院日清单" } }, { "path": "pages/index/inpatientList/inpatientInfo/inpatientInfo", "style": { "navigationBarTitleText": "住院人详情" } }, { "path": "pages/index/inpatientList/inpatientPrepare/inpatientPrepare", "style": { "navigationBarTitleText": "住院预约" } }, { "path": "pages/payment/payment", "style": { "navigationBarTitleText": "收银台" } }, { "path": "pages/index/report/reportDetail0/reportDetail0", "style": { "navigationBarTitleText": "检查报告详情" } }, { "path": "pages/index/report/reportDetail1/reportDetail1", "style": { "navigationBarTitleText": "检验报告详情" } }, { "path": "pages/user/login/login", "style": { "navigationBarTitleText": "用户登录" } }], "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "安化县人民医院", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8", "app-plus": { "background": "#efeff4" } }, "tabBar": { "list": [{ "pagePath": "pages/index/index", "text": "首页", "iconPath": "static/shouye.png", "selectedIconPath": "static/shouye02.png" }, { "pagePath": "pages/info/info", "text": "医院信息", "iconPath": "static/yiyuan.png", "selectedIconPath": "static/yiyuan02.png" }, { "pagePath": "pages/user/user", "text": "个人中心", "iconPath": "static/geren.png", "selectedIconPath": "static/geren02.png" }] }, "easycom": { "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue" } };exports.default = _default;
 
 /***/ }),
 
@@ -11029,7 +11034,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -11050,14 +11055,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -11143,7 +11148,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"安化县人民医院","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));

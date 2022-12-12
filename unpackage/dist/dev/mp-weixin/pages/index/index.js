@@ -276,7 +276,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _request = _interopRequireDefault(__webpack_require__(/*! @/request/request.js */ 19));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+var _request = __webpack_require__(/*! @/request/request.js */ 19); //
 //
 //
 //
@@ -376,8 +376,8 @@ var _request = _interopRequireDefault(__webpack_require__(/*! @/request/request.
 //
 var _default = { data: function data() {return { visitCard: { id: 1, name: '张三', idCard: 430923222231234231, idDefault: 1 }, user: { id: 1 } };}, methods: { //页面跳转
     to: function to(url1, e) {uni.navigateTo({ url: '/pages/index' + url1 });}, //携带参数跳转页面
-    toByElement: function toByElement(url1, e) {uni.navigateTo({ url: '/pages/index' + url1 + '?id=' + e });}, toOtherBar: function toOtherBar(url1) {uni.navigateTo({ url: url1 });} }, onLoad: function onLoad(e) {// this.login();
-    //通过用户id获取默认就诊卡信息
+    toByElement: function toByElement(url1, e) {uni.navigateTo({ url: '/pages/index' + url1 + '?id=' + e });}, toOtherBar: function toOtherBar(url1) {uni.navigateTo({ url: url1 });}, login: function login() {wx.login({ success: function success(res) {if (res.code) {//获取 OpenID
+            _request.appInfo.js_code = res.code;wx.request({ url: 'https://api.weixin.qq.com/sns/jscode2session', data: { appid: 'wx743d1ccae179cfca', secret: '6c1efa595166a24757494281cc5ee43e', js_code: res.code, grant_type: 'authorization_code' }, success: function success(ress) {console.log(ress);} });console.log('re', re);console.log('code', res.code);} else {console.log('登录失败！' + res.errMsg);}} });} }, onLoad: function onLoad(e) {this.login(); //通过用户id获取默认就诊卡信息
     //healthCard
     //获取登录信息
   }, onLaunch: function onLaunch() {//this.login();

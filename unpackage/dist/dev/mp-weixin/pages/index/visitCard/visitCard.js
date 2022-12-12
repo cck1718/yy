@@ -170,13 +170,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-var that = void 0;var _default =
+var _default =
 {
   data: function data() {
     return {
       imagePath: '',
-      imgList: [] };
+      imgUrl: '' };
 
   },
   methods: {
@@ -195,13 +194,26 @@ var that = void 0;var _default =
     },
     //上传图片
     img: function img() {
+      var that = this;
       uni.chooseImage({
         count: 1,
+        sizetype: ['original', 'compressed'],
+        sourceType: ['album', 'canera'],
         success: function success(res) {
-          console.log('tempFiles', JSON.stringify(res.tempFiles));
-          console.log('tempFiles', JSON.stringify(res.tempFilePaths));
+          that.imgUrl = res.tempFilePaths[0];
+          uni.getFileSystemManager().readFile({
+            filePath: that.imgUrl,
+            encoding: 'base64',
+            success: function success(r) {
+              console.log('r.data', r.data);
+              that.imgUrl = 'data:image/jpg;base64,' + r.data;
+              console.log('that.imgUrl', that.imgUrl);
+            } });
+
+          //console.log('tempFiles',JSON.stringify(res.tempFiles));
+          //console.log('tempFiles',JSON.stringify(res.tempFilePaths));
           //JSON.stringify(res.tempFilePaths);
-          //this.imgList.push(res.tempFilePaths[0])
+          //this.imgUrl.push(res.tempFilePaths[0])
         } });
 
     },

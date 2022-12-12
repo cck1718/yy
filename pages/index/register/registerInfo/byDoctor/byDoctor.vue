@@ -122,6 +122,7 @@
 				}
 				console.log(this.registerPlus);
 			},
+			//医生号源接口
 			async getDoctorPre(ysdm,time){
 				params.request.head.tranCode="CYYGH007";
 				params.request.body={"ysdm":ysdm,"ksrq":time,"jsrq":time};
@@ -130,6 +131,7 @@
 				console.log("ysdm",ysdm);
 				this.getPB(this.doctor[0].pbxh);
 			},
+			//排版接口
 			async getPB(pbxh){
 				params.request.head.tranCode="CYYGH008";
 				params.request.body={"pbxh":pbxh};
@@ -139,12 +141,13 @@
 				console.log("body",this.retisteBydoctor);
 				this.plus()
 			},
+			//预算接口 根据返回的信息生成收据单
 			async prePay(patid,pbxh){
 				params.request.head.tranCode="B201";
 				params.request.body={"patid":patid,"pbmxxh":pbxh,"czksfbz":'0',};
 				const {data:res} = await uni.$http.post(url,params);
 				console.log("prePay",res);
-				return res;
+				return res.reponse.body;
 			}
 		},
 		onLoad(e) {

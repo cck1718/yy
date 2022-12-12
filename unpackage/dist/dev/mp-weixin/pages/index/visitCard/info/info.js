@@ -179,14 +179,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -195,12 +187,11 @@ var _default =
       idCard: '',
       address: '',
       phone: '',
-      code: '',
-      flag: 0 };
+      code: '' };
 
   },
   methods: {
-    select1: function select1() {
+    select: function select() {
       if (this.name == null || this.name == '' || typeof this.name != 'string' || this.name.length < 2 || this.name.length > 20) {
         uni.showToast({
           title: '请输入2-20位合法姓名',
@@ -224,23 +215,13 @@ var _default =
       }
       this.flag = 1;
       return;
-    },
-    select2: function select2() {
-      if (this.code == null || this.code == '') {
-        uni.showToast({
-          title: '请输入验证码',
-          icon: 'none' });
-
-        //调用接口验证信息
-        return;
-      }
     } },
+
 
   onLoad: function onLoad(e) {
     this.name = e.name;
     this.idCard = e.idCard;
     this.address = e.address;
-    this.phone = e.phone;
   } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
